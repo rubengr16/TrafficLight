@@ -1,4 +1,4 @@
-public class RightTrafficLight extends TrafficLight{ // extends TrafficLight methods
+public class RightTrafficLight extends TrafficLight implements IRightTrafficLight { // extends TrafficLight methods
     private int rightColour;
 
     public RightTrafficLight () {

@@ -1,4 +1,4 @@
-public class TrafficLight {
+public class TrafficLight implements ITrafficLight {
     // properties
     public static final int RED = 0; // constant, more readable than the numbers; public enables the use out of the class,
     public static final int GREEN = 1; // static means that is shared and the same in each instance of the class
@@ -31,16 +31,16 @@ public class TrafficLight {
         return this.colour == trafficLight.getColour();
     }
 
-    public static boolean equals (TrafficLight trafficLight1, TrafficLight trafficLight2) { // unworthy
+    public /* static */ boolean equals (TrafficLight trafficLight1, TrafficLight trafficLight2) { // unworthy
         return trafficLight1.getColour() == trafficLight2.getColour();
     }
 
     @Override
-    public String toString() {
+    public String toString () {
         return toColour();
     }
 
-    private String toColour() {
+    public String toColour () {
         if (colour == 0) {
             return " RED";
         }
